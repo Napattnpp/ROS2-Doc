@@ -1,9 +1,13 @@
 sudo apt update && sudo apt upgrade -y
+
 ----
+
 sudo apt install -y \
   build-essential cmake git wget curl gnupg2 lsb-release \
   python3-pip python3-colcon-common-extensions python3-vcstool
+  
 ----
+
 sudo apt install -y \
   libasio-dev libtinyxml2-dev libcunit1-dev \
   liblog4cxx-dev libyaml-cpp-dev libeigen3-dev \
@@ -13,10 +17,14 @@ sudo apt install -y \
 
 mkdir -p ~/ros2_foxy/src
 cd ~/ros2_foxy
+
 ----
+
 wget https://raw.githubusercontent.com/ros2/ros2/foxy/ros2.repos
 vcs import src < ros2.repos
+
 ----
+
 cd ~/ros2_foxy/src
 git clone https://github.com/ros2/rolling-bionic-patches.git
 ~/ros2_foxy/src/rolling-bionic-patches/apply_patches.sh ~/ros2_foxy
