@@ -40,3 +40,12 @@ Install trasnsport drivers: `git clone https://github.com/ros-drivers/transport_
 Install ackermann: `sudo apt install ros-foxy-ackermann-msgs` \
 Install serial driver: `sudo apt install ros-foxy-serial-driver` \
 Install joy: `sudo apt install ros-foxy-joy` 
+
+
+
+
+Docker
+------
+`docker run -it --name my-ros-container ros:humble-perception` \
+`source /opt/ros/humble/setup.bash` \
+`docker start -ai my-ros-container`  
