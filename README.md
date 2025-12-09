@@ -6,7 +6,7 @@ Project Setup
 -------------
 Create work space: `mkdir -p <work_spcae_name>/src` \
 Create package: `ros2 pkg create --build-type ament_cmake --license Apache-2.0 <package_name>` \
-Build package: `colcon build`, `colcon build --packages-select <package_name>` \
+Build package: `colcon build`, `colcon build --symlink-install`, `colcon build --packages-select <package_name>` \
 Source the setup file: `source install/setup.bash`
 
 
