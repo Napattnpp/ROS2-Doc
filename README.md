@@ -39,3 +39,4 @@ Install trasnsport drivers: `git clone https://github.com/ros-drivers/transport_
 (Run once)
 Install ackermann: `sudo apt install ros-foxy-ackermann-msgs` \
 Install serial driver: `sudo apt install ros-foxy-serial-driver` \
+Install joy: `sudo apt install ros-foxy-joy` 
