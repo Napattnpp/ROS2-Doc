@@ -34,7 +34,7 @@ Check connection type: `sudo zerotier-cli peers`
 
 Additional Installation
 -----------------------
-Install trasnsport drivers: `sudo apt install -y ros-foxy-transport-drivers` \
+Install trasnsport drivers: `git clone https://github.com/ros-drivers/transport_drivers.git -b foxy` \
 (Run once)
 `sudo apt update` \
 `sudo apt install ros-foxy-sdl2-vendor ros-foxy-ackermann-msgs ros-foxy-teleop-twist-joy ros-foxy-serial-driver` \
