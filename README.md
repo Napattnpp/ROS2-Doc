@@ -44,10 +44,10 @@ Install trasnsport drivers: `git clone https://github.com/ros-drivers/transport_
 
 DDS
 -----------------------
-`sudo apt update
-sudo apt install ros-foxy-rmw-cyclonedds-cpp` \
-`echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc
-source ~/.bashrc`
+`sudo apt update` \
+`sudo apt install ros-foxy-rmw-cyclonedds-cpp` \
+`echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc` \
+`source ~/.bashrc`
 
 
 
