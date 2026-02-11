@@ -1,7 +1,7 @@
 export CYCLONEDDS_URI='<CycloneDDS><Domain><General><NetworkInterfaceAddress>wlan0</NetworkInterfaceAddress></General></Domain></CycloneDDS>'
 
-wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
-echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+sudo apt remove anydesk
+wget https://download.anydesk.com/linux/anydesk_6.1.1-1_arm64.deb
 
-sudo apt update
-sudo apt install anydesk
+sudo dpkg -i anydesk_6.1.1-1_arm64.deb
+sudo apt --fix-broken install
