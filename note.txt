@@ -1,10 +1,14 @@
-export CYCLONEDDS_URI='<CycloneDDS><Domain><General><NetworkInterfaceAddress>wlan0</NetworkInterfaceAddress></General></Domain></CycloneDDS>'
+# Terminal A (agent)
+echo "DOMAIN=$ROS_DOMAIN_ID RMW=$RMW_IMPLEMENTATION"
+ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyACM0 -v4
 
-wget https://download.nomachine.com/download/8.11/Linux/nomachine_8.11.3_1_arm64.deb
 
-sudo dpkg -i nomachine_*.deb
-sudo apt --fix-broken install
+# Terminal B (CLI)
+echo "DOMAIN=$ROS_DOMAIN_ID RMW=$RMW_IMPLEMENTATION"
+ros2 daemon stop
+ros2 daemon start
+ros2 node list
+ros2 topic list -t
 
-sudo systemctl status nxserver
-
-sudo systemctl enable nxserver
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+export ROS_DOMAIN_ID=0
