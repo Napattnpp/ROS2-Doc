@@ -1,14 +1,10 @@
-# Terminal A (agent)
-echo "DOMAIN=$ROS_DOMAIN_ID RMW=$RMW_IMPLEMENTATION"
-ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyACM0 -v4
+source /opt/ros/foxy/setup.bash
+echo $RMW_IMPLEMENTATION
+ros2 doctor --report | grep -i rmw
 
 
-# Terminal B (CLI)
-echo "DOMAIN=$ROS_DOMAIN_ID RMW=$RMW_IMPLEMENTATION"
-ros2 daemon stop
-ros2 daemon start
-ros2 node list
-ros2 topic list -t
 
-export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-export ROS_DOMAIN_ID=0
+ls -l /dev/ttyACM* /dev/ttyUSB*
+
+sudo usermod -a -G dialout $USER
+# log out/in (or reboot)
