@@ -11,3 +11,13 @@ export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ros2 daemon stop
 ros2 daemon start
 ros2 topic list -t
+
+
+ros2 bag record \
+/tf /tf_static \
+/imu/data \
+/odom \
+/odometry/filtered \
+/sensors/core \
+/commands/servo/position \
+/commands/motor/speed
