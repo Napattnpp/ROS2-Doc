@@ -3,15 +3,12 @@ export ROS_DOMAIN_ID=0
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyACM0 -v6
 
-
-
 source /opt/ros/<your_distro>/setup.bash
 export ROS_DOMAIN_ID=0
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ros2 daemon stop
 ros2 daemon start
 ros2 topic list -t
-
 
 ros2 bag record \
 /tf /tf_static \
@@ -23,4 +20,29 @@ ros2 bag record \
 /commands/motor/speed
 
 
+------------------
+
+
 rosdep install -i --from-path src --rosdistro foxy -y --skip-keys "asio nlohmann_json"
+
+sudo rosdep init
+rosdep update
+
+rosdep resolve robot_localization
+
+sudo apt update
+sudo apt install ros-foxy-robot-localization
+rosdep install --from-paths src --ignore-src -r -y
+
+
+------------
+
+
+sudo apt update
+sudo apt install -y python3-colcon-common-extensions python3-rosdep git
+rosdep update
+
+git clone https://github.com/foxglove/ros-foxglove-bridge.git
+rosdep install --from-paths src --ignore-src -r -y
+colcon build --packages-select foxglove_bridge
+ros2 launch foxglove_bridge foxglove_bridge_launch.xml
