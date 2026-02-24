@@ -21,3 +21,6 @@ ros2 bag record \
 /sensors/core \
 /commands/servo/position \
 /commands/motor/speed
+
+
+rosdep install -i --from-path src --rosdistro foxy -y --skip-keys "asio nlohmann_json"
