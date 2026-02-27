@@ -25,14 +25,6 @@ ros2 bag record \
 b15644912e7b3cd5
 https://drive.google.com/drive/folders/1N0xOtJzdbNTUE-D_Xjko-mrmlc9OgNMI?usp=share_link
 
-
-> **NOTE:**
-> NOTE
-> **Note:** This is a note
-> NOTE
-
-> **Warning:** This is a warning
-
 > [!NOTE]
 > This is a note
 
