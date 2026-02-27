@@ -24,21 +24,3 @@ ros2 bag record \
 
 b15644912e7b3cd5
 https://drive.google.com/drive/folders/1N0xOtJzdbNTUE-D_Xjko-mrmlc9OgNMI?usp=share_link
-
-> [!NOTE]
-> This is a note
-
-> [!TIP]
-> This is a tip
-
-> [!IMPORTANT]
-> This is important information
-
-> [!WARNING]
-> This is a warning
-
-> [!CAUTION]
-> This is a caution
-
-> [!NOTE]
-> ***Distributions $\color{red}{\text{older than}}$ Humble:*** `sudo apt install ros-foxy-rosbridge-server`
