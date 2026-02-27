@@ -39,3 +39,6 @@ https://drive.google.com/drive/folders/1N0xOtJzdbNTUE-D_Xjko-mrmlc9OgNMI?usp=sha
 
 > [!CAUTION]
 > This is a caution
+
+> [!NOTE]
+> ***Distributions $\color{red}{\text{older than}}$ Humble:*** `sudo apt install ros-foxy-rosbridge-server`
