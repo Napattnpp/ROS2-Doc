@@ -24,3 +24,18 @@ ros2 bag record \
 
 b15644912e7b3cd5
 https://drive.google.com/drive/folders/1N0xOtJzdbNTUE-D_Xjko-mrmlc9OgNMI?usp=share_link
+
+
+if prev_time == nil then
+  prev_time = time
+  return 0
+end
+
+local dt = time - prev_time
+prev_time = time
+
+if dt > 0 then
+  return 1.0 / dt
+else
+  return 0
+end
