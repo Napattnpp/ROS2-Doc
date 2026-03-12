@@ -73,5 +73,5 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="XXXX", ATTRS{idProduct}=="YYYY", MODE="0666"
         and `/F110th/src/f1tenth_system/f1tenth_stack/config/joy_teleop.yaml` **(Line 33)**, respectively.
         By using this equation:  `(speed_to_erpm_gain + x) * (scale - y) = MAX ERPM`
 > [!NOTE]
-> [Use this website to help you plot the graph and pick the right value](https://www.desmos.com/calculator)
+> [Use this website to help you plot the graph and pick the right value](https://www.desmos.com/calculator) \
 > By using this equation:  `(speed_to_erpm_gain + x) * (scale - y) = MAX ERPM`
